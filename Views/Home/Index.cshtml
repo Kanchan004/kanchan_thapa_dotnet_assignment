@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4 text-primary">Welcome To Appointment Schedular</h1>
+    <h3 class="h5 text-secondary">Schedule your every appointment easily</h3>
+</div>
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card p-3">
+                <h4>Your Appointments</h4>
+                <ul>
+                    <li>Meeting with Dr. XYZ - Feb 15</li>
+                    <li>Check-up - Feb 18</li>
+                </ul>
+                <a href="/Appointment" class="btn btn-primary">View All</a>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card p-3">
+                <h4>Schedule New Appointment</h4>
+                <a href="/Appointment/Create" class="btn btn-success">Book Now</a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Appointmentschedular.Models.Appointment>
+
+@{
+    ViewData["Title"] = "Appointments";
+}
+
+<h2 class="text-primary">Appointments List</h2>
+<h3>Total Appointments: @Model.Count()</h3>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Appointment Details</th>
+            <th>Actions</th>  <!-- Add a column for the Action buttons -->
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null && Model.Any())
+        {
+            int count = 1;
+            foreach (var appt in Model)
+            {
+                <tr>
+                    <td>@count</td>
+                    <td>@appt.Description</td>
+                    <td>
+                        <!-- Edit Button -->
+                        <a href="@Url.Action("Edit", "Appointment", new { id = appt.Id })" class="btn btn-warning">Edit</a>
+                        
+                        <!-- Delete Button -->
+                        <a href="@Url.Action("Delete", "Appointment", new { id = appt.Id })" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+                count++;
+            }
+        }
+        else
+        {
+            <tr><td colspan="3" class="text-danger">No Appointments Found</td></tr>
+        }
+    </tbody>
+</table>
+
+<a href="/Appointment/Create" class="btn btn-success">Book New Appointment</a>
