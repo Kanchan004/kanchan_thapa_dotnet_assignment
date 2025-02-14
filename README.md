@@ -36,4 +36,15 @@ This project is made on MVC framework which incorporates authentication and auth
 2. Configure the database in `appsettings.json`.
 3. Run migrations: `dotnet ef database update`.
 4. Start the application using `dotnet run`.
-
+   
+# Related images
+![solution](screenshots/solution.png)
+![SQLserverQuery](screenshots/SQLserverQuery.png)
+![Registerpage](screenshots/Registerpage.png)
+![Loginpage](screenshots/Loginpage.png)
+![Homepage](screenshots/Homepage.png)
+![Editappointmentdetails](screenshots/Editappointmentdetails.png)
+![Deleteappointment](screenshots/Deleteappointment.png)
+![CreateAppointment](screenshots/CreateAppointment.png)
+![Appointmentlists](screenshots/Appointmentlists.png)
+![Afterdeletion](screenshots/Afterdeletion.png)
